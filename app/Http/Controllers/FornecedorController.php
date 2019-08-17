@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FornecedorRequest;
 use App\Fornecedor;
 use DB;
 class FornecedorController extends Controller {
@@ -16,7 +17,7 @@ class FornecedorController extends Controller {
        return view('fornecedorForm');
     }
 
-    public function store(Request $request){
+    public function store(FornecedorRequest $request){
 
         DB::beginTransaction();
         
@@ -54,7 +55,7 @@ class FornecedorController extends Controller {
         return view('fornecedorForm', compact('fornecedor'));
     }
 
-    public function update(Request $request, $id){
+    public function update(FornecedorRequest $request, $id){
         DB::beginTransaction();
 
         try {

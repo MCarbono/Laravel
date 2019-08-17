@@ -1,7 +1,9 @@
 @extends('principal')
 
 @section('conteudo')
-<table border=1>
+<h1>Produtos</h1>
+<div class="table table-striped table-hover table-bordered">
+<table>
         <tr>
             <th>Nome</th>
             <th>Descrição</th>
@@ -21,6 +23,7 @@
             </tr>
         @endforeach
     </table>
-
+</div>
     <a href="{{action('ProdutoController@create')}}">Cadastrar Produto</a>
+    <a href="{{action('FornecedorController@create')}}">Cadastrar fornecedor</a>
 @stop

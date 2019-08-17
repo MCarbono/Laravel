@@ -5,14 +5,17 @@
     @csrf
     <div class="form-group">
             <input type="text" class="form-control" name="nome"  value="{{old('nome', isset($fornecedor) ? $fornecedor->nome : '')}}" placeholder="Nome" >
+            {{$errors->first('nome')}}
     </div>
 
     <div class="form-group">
             <input type="text" class="form-control" name="cnpj"  value="{{old('cnpj', isset($fornecedor) ? $fornecedor->cnpj : '')}}" placeholder="CNPJ">
+            {{$errors->first('cnpj')}}
     </div>
 
     <div class="form-group">
         <input type="text" class="form-control" name="email"  value="{{old('email', isset($fornecedor) ? $fornecedor->email : '')}}"placeholder="Email">
+        {{$errors->first('email')}}
     </div>
     <button type="submit">Enviar</button>
     </form>

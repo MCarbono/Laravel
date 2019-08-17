@@ -19,8 +19,6 @@ Route::post('/produtoForm/{id}', 'ProdutoController@update');
 Route::get('/delete/{id}', 'ProdutoController@destroy');
 Route::get('/produtoEdit/{id}', 'ProdutoController@edit');
 
-
-
 //Fornecedor
 Route::get('/fornecedor', 'FornecedorController@index');
 Route::get('/fornecedorForm', 'FornecedorController@create');
